@@ -1,4 +1,4 @@
-# HelicityScalarsProject
+# Helicity Scalers Project
 
 Supplimentary code to help test the helicity functionality from the [hcana](https://github.com/mint42/hcana) repository.
 
