@@ -5,10 +5,12 @@ Supplimentary code to help test the helicity functionality from the [hcana](http
 ## generate_asymmetry_hists.C
 This code takes a replay file and generates a pdf full of histograms for all of the *rate variables in the TSHelH tree. These histograms group events by quartet (a group of four electron helicities in the format +--+ or -++-) and fills the histogram with that quartet's asymmetry (SUM(actualHelicity * variable)/SUM(variable)). Asymmetries should be centered near zero if helicity is working correctly.
 
-### Usage: Option 1 (Not implemented yet)
+### Usage: Option 1
 Put your desired replay files in the ```replay_root_files``` folder, making sure they have the format ```hms_replay_production_####*``` (where #### is the run number) and run this script to do all files:
 
-```$> ./analyze_asymmetries```
+```$> ./analyze_asymmetries.sh```
+
+This will put the files in ./asymmetry_outfiles. If this script hangs on a single file for too long, try ctrl+\ and that should fix it.
 
 ### Usage: Option 2
 
