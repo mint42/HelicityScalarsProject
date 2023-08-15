@@ -33,10 +33,12 @@ The program may take a minute to run.
 ## compare_scalers.C
 This code compares data from the TSHelH and TSH scalar trees from a given replay file. The comparison is done by plotting the variables the trees have in common onto the same histogram and saving those histograms as a pdf file.
 
-### Usage: Option 1 (Not implemented yet)
+### Usage: Option 1
 Put your desired replay files in the ```replay_root_files``` folder, making sure they have the format ```hms_replay_production_####*``` (where #### is the run number) and run this script to do all files:
 
 ```$> ./analyze_scalers```
+
+This will put the files in ./asymmetry_outfiles. If this script hangs on a single file for too long, try ctrl+\ and that should fix it.
 
 ### Usage: Option 2
 
