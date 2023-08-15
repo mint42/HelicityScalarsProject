@@ -22,11 +22,11 @@
 
 using namespace std;
 
+#define FILE_NAME "replay_root_files/hms_replay_production_1035_50000.root"
+#define PDF_NAME "generate_asymmetry_hists.pdf"
 #define NUM_BINS 500
 #define NUM_VARS_PRINT 22
-
-#define HELI_TREE_NAME "TSHelH"
-#define THE_FILE "replay_root_files/hms_replay_production_1035_50000.root"
+#define HELI_TREE_NAME "TSHelH" // do not change
 
 // hms_replay_production_1035_50000.root
 // hms_replay_production_1036_120000.root
@@ -34,7 +34,7 @@ using namespace std;
 // hms_replay_production_1038_125000.root
 // hms_replay_production_1039_50000.root
 
-void 	generate_asymmetry_hists(string root_file = THE_FILE, string pdf_name = "hists2")
+void 	generate_asymmetry_hists(string root_file = FILE_NAME, string pdf_name = PDF_NAME)
 {
 	// loads the root files, trees, and set up tree readers
 	TFile		*t_file = TFile::Open(root_file.c_str());

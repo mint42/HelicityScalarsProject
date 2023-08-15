@@ -18,12 +18,12 @@
 
 using namespace std;
 
+#define PDF_NAME "generage_asymmetry_hists.pdf"
+#define FILE_NAME "replay_root_files/hms_replay_production_1038_125000.root"
 #define NUM_BINS 500
 #define NUM_VARS_PRINT 22
-
-#define HELI_TREE_NAME "TSHelH"
-#define SCAL_TREE_NAME "TSH"
-#define THE_FILE "replay_root_files/hms_replay_production_1038_125000.root"
+#define HELI_TREE_NAME "TSHelH" // do not change
+#define SCAL_TREE_NAME "TSH" // do not change
 
 // hms_replay_production_1035_50000.root
 // hms_replay_production_1036_120000.root
@@ -42,10 +42,10 @@ using namespace std;
  *	@return:		N/A
  *
  */
-void 	compare_scalers(string pdf_name = "c1")
+void 	compare_scalers(string root_file = FILE_NAME, string pdf_name = PDF_NAME)
 {
 	// loads the root files, and trees
-	TFile	*t_file = TFile::Open(THE_FILE);
+	TFile	*t_file = TFile::Open(root_file.c_str());
 
 	TTree	*scal_tree;
 	TTree	*heli_tree;
